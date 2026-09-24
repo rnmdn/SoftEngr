@@ -1,0 +1,83 @@
+:root{--ink:#12242b;--dark:#102b31;--paper:#f3f6f5;--white:#fff;--teal:#087b72;--teal-dark:#07584f;--muted:#49616a;--line:#cbd8d6;--pale:#e2efeb;--lime:#d3f287;--error:#a62f35;--gutter:clamp(20px,5vw,76px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}button,input{font:inherit}a{color:inherit}button{cursor:pointer}::selection{background:var(--lime);color:var(--dark)}:focus-visible{outline:3px solid var(--teal);outline-offset:3px}.skip{position:absolute;top:-70px;left:12px;background:var(--lime);padding:10px;z-index:10}.skip:focus{top:12px}.container{width:min(100% - 2*var(--gutter),1200px);margin:auto}.site-header{background:var(--dark);color:white}.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font:850 1.55rem/1 "Avenir Next","Trebuchet MS",sans-serif;letter-spacing:-.035em;text-decoration:none}.brand span{color:var(--lime)}.nav-links{display:flex;align-items:center;gap:24px}.nav-links a{text-decoration:none;font-weight:700}.nav-links a:hover{text-decoration:underline;text-underline-offset:5px}.nav-toggle{display:none;background:none;border:1px solid #fff8;color:white;padding:10px 14px;border-radius:8px}.button{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:52px;padding:12px 23px;border:1px solid transparent;border-radius:100px;text-decoration:none;font-weight:800;line-height:1.2}.button-primary{background:var(--lime);color:var(--dark)}.button-dark{background:var(--dark);color:white}.button-outline{background:transparent;border-color:var(--dark);color:var(--dark)}.button:disabled{opacity:.45;cursor:not-allowed}.flow-top{background:var(--dark);color:white;padding:60px 0 84px}.flow-top h1{font:800 clamp(2.7rem,5.5vw,5.4rem)/1.02 "Avenir Next","Trebuchet MS",sans-serif;letter-spacing:-.035em;max-width:900px;margin:0 0 20px;text-wrap:balance}.flow-top p{color:#d4e5e4;max-width:66ch;font-size:1.15rem;margin:0}.flow-label{display:inline-block;color:var(--lime);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}.flow-nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}.flow-nav span,.flow-nav a{font-size:.8rem;text-decoration:none;border:1px solid #ffffff70;padding:7px 14px;border-radius:100px;color:#d4e5e4}.flow-nav .active{background:var(--lime);border-color:var(--lime);color:var(--dark);font-weight:800}.layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:clamp(30px,5vw,72px);padding:66px 0 110px}.main-panel{min-width:0}.sidebar{align-self:start;position:sticky;top:24px;border-top:1px solid var(--line);padding:22px;background:var(--pale)}.sidebar h2{font-size:1.1rem;margin:0 0 12px}.sidebar p{font-size:.91rem;color:var(--muted);margin:0}.page-title{font:800 clamp(2rem,3.3vw,3.4rem)/1.08 "Avenir Next","Trebuchet MS",sans-serif;letter-spacing:-.03em;margin:0 0 14px}.lede{color:var(--muted);font-size:1.08rem;max-width:68ch;margin:0 0 32px}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding-bottom:15px;margin:42px 0 20px}.section-head h2{font-size:1.55rem;line-height:1.2;margin:0}.section-head small{color:var(--muted);font-weight:700}.question{border:0;border-bottom:1px solid var(--line);padding:22px 0;margin:0}.question legend{font-weight:800;font-size:1.08rem;padding:0 0 14px}.choices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.choices.two{grid-template-columns:repeat(2,minmax(0,1fr))}.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}.choice span{display:flex;align-items:center;min-height:54px;padding:10px 13px;background:white;border:1px solid var(--line);border-radius:8px;font-size:.9rem;font-weight:700;line-height:1.25}.choice input:checked+span{background:var(--pale);border:2px solid var(--teal-dark);padding:9px 12px}.choice input:focus-visible+span{outline:3px solid var(--teal);outline-offset:2px}.choice:hover span{border-color:var(--teal)}.check-list{display:grid;gap:8px}.check-list .choice span{min-height:58px}.actions{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:36px}.error{color:var(--error);font-weight:750;margin-top:20px}.error[hidden],[hidden]{display:none!important}.review-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.review-block,.card{background:white;padding:26px;border:1px solid var(--line)}.review-block h3,.card h3{font-size:1.28rem;margin:0 0 12px}.review-block p,.card p{color:var(--muted);margin:0}.review-block a{color:var(--teal-dark);font-weight:800;text-underline-offset:3px}.review-block ul{margin:0;padding-left:20px;color:var(--muted)}.notice{background:var(--pale);padding:18px 22px;margin:24px 0;color:var(--ink)}.notice p{margin:0}.result-hero{background:var(--dark);color:white;padding:clamp(28px,5vw,54px);margin-bottom:12px}.result-hero small{color:var(--lime);font-weight:800;text-transform:uppercase;letter-spacing:.1em}.result-hero h2{font:800 clamp(2.5rem,5vw,4.8rem)/1.05 "Avenir Next","Trebuchet MS",sans-serif;letter-spacing:-.035em;margin:16px 0}.result-hero p{color:#d4e5e4;max-width:58ch}.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.rank-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}.rank-row:last-child{border:0}.rank-row strong{display:block}.rank-row small{color:var(--muted)}.rank-bar{grid-column:1/-1;height:7px;background:var(--pale)}.rank-bar i{display:block;height:100%;background:var(--teal);width:var(--w)}.tag{font-size:.75rem;font-weight:850;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-dark)}.tag.gap{color:#9c3f27}.tag.partial{color:#775b13}.step-list{counter-reset:steps;list-style:none;padding:0;margin:0}.step-list li{counter-increment:steps;display:grid;grid-template-columns:32px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}.step-list li:before{content:counter(steps,decimal-leading-zero);color:var(--teal-dark);font-weight:850}.path-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}.path-tabs button{border:1px solid var(--line);background:white;color:var(--ink);border-radius:100px;padding:9px 15px;font-weight:750}.path-tabs button[aria-pressed=true]{background:var(--dark);color:white}.footer{background:#091e23;color:#c5d9d7;padding:34px 0;font-size:.85rem}.footer .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:white}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:static}.choices{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.nav-toggle{display:block}.nav-links{display:none;position:absolute;z-index:5;top:70px;left:0;right:0;background:var(--dark);padding:20px var(--gutter);flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.flow-top{padding:48px 0 60px}.layout{padding:40px 0 70px}.review-list,.result-grid{grid-template-columns:1fr}.actions .button{width:100%}.choices,.choices.two{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.flow-top{padding:36px 0 42px}.flow-top h1{font-size:clamp(2.5rem,4vw,3.8rem);max-width:1000px;margin-bottom:10px}.flow-top p{font-size:1rem;max-width:76ch}.flow-label{margin-bottom:12px}.flow-nav{margin-top:20px}.layout{padding-top:48px}
+@media(max-width:650px){.flow-top{padding:32px 0 38px}.flow-top h1{font-size:2.45rem}.layout{padding-top:34px}}
+.flow-top{padding:24px 0 28px}.flow-top h1{font-size:clamp(2rem,3vw,2.9rem);margin-bottom:8px}.flow-label{margin-bottom:8px}.flow-nav{margin-top:14px}.flow-top p{font-size:.95rem;max-width:85ch}.layout{padding-top:38px}
+.answer-status{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.88rem;font-weight:750;color:var(--muted);margin:0 0 8px}.answer-track{height:6px;background:var(--line);margin-bottom:22px;overflow:hidden}.answer-track>div{height:100%;width:0;background:var(--teal);}
+.evidence-list{list-style:none;margin:0;padding:0}.evidence-item{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}.evidence-item:last-child{border:0}.evidence-number{color:var(--teal-dark);font-weight:850}.evidence-item h4{font-size:1.08rem;line-height:1.3;margin:0 0 5px}.evidence-item p{margin:0 0 5px;color:var(--ink);font-size:.9rem}.evidence-item small{color:var(--muted)}.card.wide{grid-column:1/-1;background:var(--pale);border:0}.card.wide h3{font-size:1.5rem;line-height:1.3;margin:12px 0}
+@media(max-width:650px){.flow-top{padding:20px 0 24px}.flow-top h1{font-size:2rem}.flow-top p{font-size:.9rem}.layout{padding-top:28px}.flow-nav{gap:6px}.flow-nav span,.flow-nav a{font-size:.74rem;padding:6px 10px}.card.wide{grid-column:auto}}
+
+/* Shared Pathfinder shell: match the landing page across the student journey. */
+:root{--gutter:clamp(20px,4.8vw,76px);--ease:cubic-bezier(.2,.8,.2,1)}
+html{scrollbar-color:#7b9d96 var(--paper)}
+body{font-family:"Segoe UI Variable","Avenir Next",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+button,a{touch-action:manipulation}
+.nav.container,.footer .container{width:min(100% - 2*var(--gutter),1440px)}
+.site-header{border-bottom:1px solid #ffffff26}
+.nav{min-height:88px}
+.brand{font-weight:850;letter-spacing:-.06em}
+.brand-mark{color:var(--lime)}
+.nav-links{gap:32px}
+.nav-links a:not(.button){font-weight:650}
+.nav-links a:not(.button):hover{text-underline-offset:6px}
+.nav-links .button{font-weight:750}
+.nav-links .button[aria-current=page]{box-shadow:inset 0 0 0 2px var(--dark)}
+.button{transition:transform .22s var(--ease),background .22s var(--ease),border-color .22s var(--ease)}
+.button:hover:not(:disabled){transform:translateY(-3px)}
+.button-primary:hover{background:#e1faa9}
+.button-dark:hover{background:#174249}
+.button-outline:hover{background:#e7f0ed}
+.arrow{font-size:1.2em;line-height:1}
+.footer{padding:72px 0 28px}
+.footer-inner{display:flex;align-items:end;justify-content:space-between;gap:32px}
+.footer-inner h2{font:800 clamp(2.4rem,4.6vw,4.7rem)/1.04 "Avenir Next","Trebuchet MS",sans-serif;letter-spacing:-.035em;margin:0 0 14px}
+.footer-inner p{color:#c5d9d7;max-width:52ch;margin:0}
+.footer-bottom{border-top:1px solid #ffffff40;margin-top:70px;padding-top:24px;color:#c5d9d7}
+.footer-bottom a{color:white}
+.footer .button-primary{color:var(--dark)}
+@media(max-width:650px){.nav-links{top:88px;gap:20px}.nav-links .button{align-self:start}.footer{padding-top:52px}.footer-inner{align-items:start;flex-direction:column}.footer-bottom{margin-top:52px}}
+
+/* Assessment clarity and error recovery. */
+.scale-guide{background:var(--pale);border-left:4px solid var(--teal);padding:18px 20px;margin-bottom:12px}
+.assessment-section-head{margin:18px 0 14px}
+.assessment-section-head h2{font-size:1rem}
+.scale-guide strong{display:block;line-height:1.35}
+.scale-guide p{margin:8px 0 0;color:var(--muted);font-size:.9rem}
+.question.needs-answer{border-left:3px solid var(--error);padding-left:14px}
+.question-error{color:var(--error);font-size:.88rem;font-weight:750;margin:10px 0 0}
+.skill-summary{margin:0 0 18px}
+.skill-summary>div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid var(--line)}
+.skill-summary dt{font-weight:700}.skill-summary dd{margin:0;color:var(--muted);text-align:right}
+
+/* Put the comparison and its evidence in the first results viewport. */
+.result-hero-compact{padding:26px 30px}
+.result-hero-compact h2{font-size:clamp(2rem,3.4vw,3.5rem);margin:7px 0 6px}
+.result-hero-compact p{margin:0}
+.results-ranking{grid-row:span 1}
+.score-key{font-size:.9rem;line-height:1.5;margin-bottom:8px!important}
+.evidence-title{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.evidence-title strong{color:var(--teal-dark);font-size:1.1rem;white-space:nowrap}
+.evidence-title strong span{font-size:.72rem;color:var(--muted)}
+.context-heading{font-size:1.05rem!important;border-top:1px solid var(--line);padding-top:20px;margin-top:24px!important}
+.context-line{margin-top:12px!important}
+.restart-confirm{display:flex;align-items:center;gap:10px;flex-wrap:wrap;border:1px solid var(--line);background:white;padding:18px;margin-top:14px}
+.restart-confirm p{flex-basis:100%;margin:0 0 4px}
+.footer{padding:27px 0}
+.footer-bottom{border-top:0;margin-top:0;padding-top:0;align-items:center}
+.footer-links{display:flex;gap:24px}
+
+@media(max-width:650px){
+  .scale-guide{padding:13px 16px}
+  .choices,.choices.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .question{padding:18px 0}
+  .choice span{min-height:48px}
+  .result-hero-compact{padding:23px}
+  .result-hero-compact h2{font-size:2rem}
+  .restart-confirm .button{width:100%}
+  .footer{padding:24px 0}
+  .footer-bottom{margin-top:0}
+}
+

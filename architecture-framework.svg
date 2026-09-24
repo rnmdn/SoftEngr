@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1160" viewBox="0 0 1800 1160" role="img" aria-labelledby="title desc">
+  <title id="title">Architectural framework of the IT Career Path Recommendation Engine</title>
+  <desc id="desc">The top lane trains a Random Forest model from categorized IT job postings. The lower lane maps student skill proficiency and prior exposure to that model, then produces top-three recommendations, example skill-gap analysis, suggested learning resources, and a results interface. Interest and work-style preference are supplementary context shown only in the results interface.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#15535a"/></marker>
+    <marker id="dashArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#52817a"/></marker>
+    <style>
+      .bg{fill:#fff}.lane{fill:#f5f9f8;stroke:#cbded9;stroke-width:2}.bar{fill:#12373d}.bartext{font:700 24px Arial,sans-serif;letter-spacing:2px;fill:#fff}.title{font:700 39px Arial,sans-serif;fill:#102b31}.subtitle{font:18px Arial,sans-serif;fill:#49616a}.box{fill:#fff;stroke:#3d7375;stroke-width:2.4;rx:10}.accent{fill:#e1f2ec}.blue{fill:#eaf1f3}.label{font:700 21px Arial,sans-serif;fill:#102b31}.small{font:16px Arial,sans-serif;fill:#49616a}.mini{font:700 15px Arial,sans-serif;fill:#07584f;letter-spacing:.5px}.flow{fill:none;stroke:#15535a;stroke-width:3;marker-end:url(#arrow);stroke-linecap:round;stroke-linejoin:round}.supp{fill:none;stroke:#52817a;stroke-width:2.6;stroke-dasharray:10 8;marker-end:url(#dashArrow);stroke-linecap:round;stroke-linejoin:round}.note{font:17px Arial,sans-serif;fill:#49616a}.chip{fill:#fff;stroke:#9bbdb6;stroke-width:1.5;rx:6}
+    </style>
+  </defs>
+  <rect class="bg" width="1800" height="1160"/>
+  <text class="title" x="50" y="51">IT Career Path Recommendation Engine</text>
+  <text class="subtitle" x="50" y="79">Architectural framework · model training and student recommendation</text>
+
+  <!-- Model training -->
+  <rect class="lane" x="34" y="114" width="1732" height="264" rx="10"/>
+  <rect class="bar" x="34" y="114" width="1732" height="52" rx="10"/>
+  <rect class="bar" x="34" y="145" width="1732" height="21"/>
+  <text class="bartext" x="60" y="148">MODEL TRAINING COMPONENT</text>
+
+  <rect class="box accent" x="50" y="200" width="240" height="120"/>
+  <text class="label" x="170" y="240" text-anchor="middle">Real IT Job</text><text class="label" x="170" y="268" text-anchor="middle">Postings</text>
+  <text class="small" x="170" y="298" text-anchor="middle">Six career categories</text>
+
+  <rect class="box blue" x="345" y="200" width="250" height="120"/>
+  <text class="label" x="470" y="240" text-anchor="middle">Skill Extraction</text><text class="label" x="470" y="268" text-anchor="middle">&amp; Normalization</text>
+
+  <rect class="box accent" x="650" y="200" width="250" height="120"/>
+  <text class="label" x="775" y="236" text-anchor="middle">Labeled Feature</text><text class="label" x="775" y="264" text-anchor="middle">Dataset</text>
+  <text class="small" x="775" y="290" text-anchor="middle">Skills as features</text><text class="small" x="775" y="309" text-anchor="middle">Job category as label</text>
+
+  <rect class="box blue" x="955" y="200" width="250" height="120"/>
+  <text class="label" x="1080" y="240" text-anchor="middle">Random Forest</text><text class="label" x="1080" y="268" text-anchor="middle">Training</text>
+
+  <rect class="box accent" x="1260" y="200" width="280" height="120"/>
+  <text class="label" x="1400" y="240" text-anchor="middle">Trained Random</text><text class="label" x="1400" y="268" text-anchor="middle">Forest Model</text>
+
+  <path class="flow" d="M290 260 H345"/><path class="flow" d="M595 260 H650"/><path class="flow" d="M900 260 H955"/><path class="flow" d="M1205 260 H1260"/>
+
+  <!-- Training bridges: dataset enters gap analysis from the right; model enters classifier from above. -->
+  <path class="flow" d="M775 200 V97 H1729 V452"/>
+  <path class="flow" d="M1400 320 V415 H865 V452"/>
+
+  <!-- Student recommendation -->
+  <rect class="lane" x="34" y="452" width="1732" height="650" rx="10"/>
+  <rect class="bar" x="34" y="452" width="1732" height="52" rx="10"/>
+  <rect class="bar" x="34" y="483" width="1732" height="21"/>
+  <text class="bartext" x="60" y="486">STUDENT RECOMMENDATION COMPONENT</text>
+  <path class="flow" d="M1729 504 V590 H1610"/>
+  <rect fill="#f5f9f8" x="1614" y="516" width="107" height="35" rx="4"/>
+  <text class="mini" x="1668" y="530" text-anchor="middle" font-size="12">CATEGORY SKILL</text><text class="mini" x="1668" y="546" text-anchor="middle" font-size="12">PATTERNS</text>
+  <path class="flow" d="M865 504 V555"/>
+  <rect fill="#f5f9f8" x="954" y="515" width="205" height="33" rx="5"/>
+  <text class="mini" x="1057" y="537" text-anchor="middle">TRAINED MODEL</text>
+
+  <rect class="box accent" x="50" y="530" width="320" height="302"/>
+  <text class="label" x="210" y="563" text-anchor="middle">Student Assessment</text>
+  <rect class="chip" x="70" y="585" width="280" height="45"/><text class="label" x="89" y="614">Skill Proficiency</text>
+  <rect class="chip" x="70" y="642" width="280" height="45"/><text class="label" x="89" y="671">Prior Exposure</text>
+  <rect class="chip" x="70" y="699" width="280" height="45"/><text class="label" x="89" y="728">Interest</text>
+  <rect class="chip" x="70" y="756" width="280" height="45"/><text class="label" x="89" y="785">Work-Style Preference</text>
+
+  <rect class="box blue" x="430" y="555" width="250" height="120"/>
+  <text class="label" x="555" y="603" text-anchor="middle">Student Feature</text><text class="label" x="555" y="633" text-anchor="middle">Mapping</text>
+
+  <rect class="box accent" x="740" y="555" width="250" height="120"/>
+  <text class="label" x="865" y="603" text-anchor="middle">Random Forest</text><text class="label" x="865" y="633" text-anchor="middle">Classification</text>
+
+  <rect class="box blue" x="1050" y="555" width="250" height="120"/>
+  <text class="label" x="1175" y="592" text-anchor="middle">Top-Three Career</text><text class="label" x="1175" y="620" text-anchor="middle">Recommendations</text>
+  <text class="small" x="1175" y="649" text-anchor="middle">with class probabilities</text>
+
+  <rect class="box accent" x="1360" y="555" width="250" height="120"/>
+  <text class="label" x="1485" y="603" text-anchor="middle">Skill-Gap</text><text class="label" x="1485" y="633" text-anchor="middle">Analysis</text>
+
+  <path class="flow" d="M350 607 H390 V592 H430"/>
+  <path class="flow" d="M350 664 H405 V638 H430"/>
+  <path class="flow" d="M680 615 H740"/><path class="flow" d="M990 615 H1050"/><path class="flow" d="M1300 615 H1360"/>
+
+  <rect class="box blue" x="1360" y="735" width="250" height="110"/>
+  <text class="label" x="1485" y="780" text-anchor="middle">Suggested Learning</text><text class="label" x="1485" y="810" text-anchor="middle">Resources</text>
+  <rect class="box accent" x="1360" y="908" width="250" height="110"/>
+  <text class="label" x="1485" y="954" text-anchor="middle">Student Results</text><text class="label" x="1485" y="984" text-anchor="middle">Interface</text>
+  <path class="flow" d="M1485 675 V735"/><path class="flow" d="M1485 845 V908"/>
+
+  <!-- Supplementary assessment context reaches the interface only. -->
+  <path class="supp" d="M350 721 H694 V1041 H1436 V1018"/>
+  <path class="supp" d="M350 778 H711 V1071 H1536 V1018"/>
+  <rect fill="#f5f9f8" x="834" y="1024" width="392" height="37" rx="5"/>
+  <text class="mini" x="1030" y="1048" text-anchor="middle">CONTEXT FOR REFLECTION ONLY</text>
+
+  <text class="note" x="50" y="1135">Recommendations support career exploration and adviser discussion; they do not guarantee career success.</text>
+</svg>
