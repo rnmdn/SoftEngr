@@ -1,15 +1,11 @@
-# Pathfinder UI
+# Pathfinder
 
-Open this folder in VS Code and run it with a local static server (for example, the Live Server extension), then open `index.html`.
+Pathfinder is a static website for BSIT students exploring IT career paths. It uses plain HTML, CSS, and JavaScript, with no build step.
 
-The student flow is:
+Run `python -m http.server 8765` from this folder, then open `http://127.0.0.1:8765/index.html`. Use the local server so the assessment and coding checks work correctly.
 
-1. `index.html` — landing page
-2. `assessment.html` — four assessment sections
-3. `review.html` — review and edit responses
-4. `results.html` — top-three paths with the skill ratings behind each direction
-5. `next-steps.html` — a practice task for the student's lowest-rated focus skill, plus more ideas
+The student journey is `index.html` → `assessment.html` → `review.html` → `skills-assessment.html` → `results.html` → `next-steps.html`. The skills assessment presents 50 knowledge questions in groups of ten, six written scenarios, and a JavaScript coding task. `research-pilot.html` redirects older links to the skills assessment.
 
-All pages are plain HTML, CSS, and JavaScript. The landing page uses `landing.css` and `landing.js`; the student pages share `student.css` and `student.js`. Responses are stored in the current browser tab with `sessionStorage` so they survive navigation between pages. Closing the tab clears them.
+Answers persist across pages in one browser tab through `sessionStorage`. The current career ranking uses self-rated skills and completed experiences. Interests and work style add context. Quiz results appear separately and do not change the ranking. There is no connected job-posting dataset or trained Random Forest model in this website, and the assessment has not yet undergone expert review or student reliability testing.
 
-The current standalone frontend calculates a local ranking from skill ratings and completed experiences. It does **not** yet call a job-posting dataset or trained Random Forest model. Connect the recommendation service before presenting the ranking as a model prediction. Interests and work style appear as context and do not change the ranking.
+Live site: https://pathfinder-it-career.vercel.app

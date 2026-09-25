@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b31">
+  <title>Skills assessment — Pathfinder</title>
+  <link rel="stylesheet" href="student.css">
+  <link rel="stylesheet" href="skills-assessment.css">
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+  <header class="site-header"><nav class="nav container" aria-label="Main navigation"><a class="brand" href="index.html">path<span class="brand-mark">/</span>finder</a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button><div class="nav-links" id="nav-links"><a href="index.html#approach">How it works</a><a href="index.html#pathways">Career paths</a><a class="button button-primary" href="assessment.html">Explore your path <span class="arrow" aria-hidden="true">↗</span></a></div></nav></header>
+  <main id="main">
+    <section class="flow-top"><div class="container"><h1>Show what you know in IT.</h1><p>Answer knowledge questions, work through practical scenarios, and try a coding task.</p><div class="flow-nav" aria-label="Progress"><a href="assessment.html">Assessment</a><a href="review.html">Review</a><span class="active" aria-current="step">Skills assessment</span><a href="results.html">Results</a><a href="next-steps.html">Next steps</a></div></div></section>
+    <div class="container layout"><section class="main-panel" aria-labelledby="page-heading"><h2 class="page-title" id="page-heading">Your skills assessment</h2><p class="lede">Answer ten questions per screen across two skill areas. Your answers are saved as you go.</p><div class="notice"><p>Your answers stay in this browser tab. You may skip an item and return to it later. Do not enter personal details in written responses.</p></div>
+    <div class="assessment-stage" aria-live="polite"><p id="stage-label">Loading assessment…</p><div class="assessment-track" aria-hidden="true"><div id="stage-fill"></div></div></div>
+    <form id="pilot-form">
+      <section aria-labelledby="quiz-heading">
+        <h2 id="quiz-heading">Knowledge questions</h2>
+        <p>Choose one answer for each question. If a question feels unfamiliar, leave it blank and continue.</p>
+        <p id="quiz-progress" role="status">Loading questions…</p>
+        <div id="quiz"></div>
+      </section>
+      <section aria-labelledby="tasks-heading">
+        <h2 id="tasks-heading">Practical scenarios</h2>
+        <p>Explain your reasoning in your own words. You do not need to write code or use external tools.</p>
+        <div id="tasks"></div>
+      </section>
+      <section aria-labelledby="coding-heading">
+        <h2 id="coding-heading">JavaScript coding task</h2>
+        <p>Write a function named <code>larger(a, b)</code> that returns the larger number. If the numbers are equal, return that number. Edit the starter code, then run the sample checks. You can retry as often as you like.</p>
+        <label for="code-editor">Your JavaScript code</label>
+        <textarea class="code" id="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off"></textarea>
+        <div class="actions">
+          <button type="button" id="run-code">Run sample checks</button>
+          <button type="button" class="secondary" id="reset-code">Reset starter code</button>
+        </div>
+        <p id="code-status" role="status" aria-live="polite"></p>
+        <pre id="code-output" aria-label="Sample check results">Run your code to see sample results.</pre>
+        <p class="muted">The sample checks show whether your code produced the expected outputs. Your code is saved in this tab.</p>
+      </section>
+      <section aria-labelledby="feedback-heading">
+        <h2 id="feedback-heading">Assessment feedback</h2>
+        <label for="unclear">Which question or task was unclear? Include its ID if possible.</label>
+        <textarea class="short" id="unclear"></textarea>
+        <label for="feedback">What would make this assessment easier to understand or complete?</label>
+        <textarea class="short" id="feedback"></textarea>
+      </section>
+      <section aria-labelledby="evidence-heading">
+        <h2 id="evidence-heading">Review your saved work</h2>
+        <p>Check what this browser tab has saved before downloading your responses. You can return to any part above and edit it.</p>
+        <ul id="evidence-summary"></ul>
+        <p class="muted">This summary shows what was saved. Your career ranking is currently based on your profile answers and completed experiences.</p>
+      </section>
+      <div class="actions">
+        <button type="button" id="view-feedback">See my skill results</button>
+        <button type="button" class="secondary" id="download">Download my responses</button>
+      </div>
+      <p class="muted">Downloading is optional. The file contains your responses and an anonymous code. Share it only if you choose to.</p>
+      <section id="practice-feedback" aria-labelledby="practice-feedback-heading" hidden tabindex="-1">
+        <h2 id="practice-feedback-heading">Your skill results</h2>
+        <p id="feedback-overview"></p>
+        <ul class="result-grid" id="domain-feedback"></ul>
+        <p id="written-feedback"></p>
+        <p id="coding-feedback"></p>
+        <p class="muted">These are correct-answer counts for the current questions. Written scenarios need human review. Your career ranking currently uses your profile ratings and completed experiences.</p>
+      </section>
+      <div class="actions"><a class="button-link" href="review.html">← Review profile</a><a class="button-link" href="results.html">Continue to career results →</a></div>
+      <div class="assessment-pager" id="assessment-pager"><button type="button" class="secondary" id="stage-back">← Back</button><button type="button" id="stage-next">Continue →</button></div>
+    </form>
+    </section><aside class="sidebar"><h2>Your answers, your pace</h2><p>Your answers are saved in this browser tab as you go. Written scenarios need human review before receiving a score.</p></aside></div>
+  </main>
+  <footer class="footer"><div class="container footer-bottom"><span>Pathfinder — IT Career Path Recommendation Engine</span><div class="footer-links"><a href="index.html">Home</a><a href="assessment.html">Assessment</a></div></div></footer>
+  <script defer src="skills-assessment.js" onerror="document.getElementById('quiz-progress').textContent='Questions could not load. Refresh this page or open it from the local server.'"></script>
+  <script defer src="skills-navigation.js"></script>
+</body>
+</html>

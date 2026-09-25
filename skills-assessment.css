@@ -1,0 +1,57 @@
+.main-panel form > section { margin: 38px 0; }
+.main-panel form > section:first-child { margin-top: 30px; }
+.main-panel form > section > h2 { font-size: 1.55rem; line-height: 1.2; margin: 0 0 8px; }
+.main-panel form > section > p { margin: 0 0 20px; color: var(--muted); }
+.main-panel form > section > p[role=status] { color: var(--teal-dark); font-weight: 750; }
+.assessment-stage { margin: 28px 0 0; }
+.assessment-stage p { margin: 0 0 9px; color: var(--teal-dark); font-weight: 800; }
+.assessment-track { height: 6px; background: var(--line); }
+.assessment-track div { height: 100%; background: var(--teal); transform: scaleX(0); transform-origin: left; transition: transform .2s ease-out; }
+.skill-group-heading { margin: 28px 0 4px; padding-bottom: 10px; border-bottom: 1px solid var(--line); color: var(--teal-dark); font-size: 1.22rem; }
+#quiz fieldset { border: 0; border-bottom: 1px solid var(--line); margin: 0; padding: 15px 0; min-width: 0; }
+#quiz legend { font-size: 1.08rem; font-weight: 800; line-height: 1.4; padding: 0 0 8px; max-width: 100%; }
+#quiz .quiz-options { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+#quiz .option { position: relative; display: flex; align-items: center; gap: 12px; min-height: 52px; margin: 0; padding: 11px 14px; background: white; border: 1px solid var(--line); border-radius: 8px; font-weight: 650; line-height: 1.4; cursor: pointer; }
+#quiz .option:hover { border-color: var(--teal); background: var(--pale); }
+#quiz .option:has(input:checked) { border: 2px solid var(--teal-dark); padding: 10px 13px; background: var(--pale); }
+#quiz .option:has(input:focus-visible) { outline: 3px solid var(--teal); outline-offset: 2px; }
+#quiz input[type=radio] { flex: 0 0 auto; accent-color: var(--teal-dark); margin: 0; }
+#tasks section { padding: 24px 0; border-bottom: 1px solid var(--line); }
+#tasks h3 { font-size: 1.12rem; line-height: 1.3; margin: 0 0 8px; }
+#tasks p { margin: 0 0 16px; max-width: 75ch; }
+form label:not(.option) { display: block; font-weight: 700; margin: 16px 0 7px; }
+textarea { display: block; width: 100%; min-height: 120px; padding: 13px 15px; color: var(--ink); background: white; border: 1px solid var(--line); border-radius: 8px; font: inherit; resize: vertical; }
+textarea.short { min-height: 82px; }
+textarea.code { min-height: 250px; font: 14px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; tab-size: 2; }
+textarea:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+form .actions { justify-content: flex-start; margin: 20px 0 28px; }
+form .actions button,form .button-link { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 23px; border: 1px solid var(--dark); border-radius: 100px; background: var(--dark); color: white; font: inherit; font-weight: 800; line-height: 1.2; text-align: center; text-decoration: none; cursor: pointer; }
+form .actions button:hover,form .button-link:hover { background: #174249; }
+form .actions button.secondary { background: transparent; color: var(--dark); }
+form .actions button.secondary:hover { background: var(--pale); }
+form .actions button:disabled { opacity: .45; cursor: not-allowed; }
+.assessment-pager { display: flex; justify-content: space-between; gap: 12px; margin: 30px 0 16px; }
+.assessment-pager button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 23px; border: 1px solid var(--dark); border-radius: 100px; background: var(--dark); color: white; font: inherit; font-weight: 800; cursor: pointer; }
+.assessment-pager button:hover { background: #174249; }
+.assessment-pager button.secondary { background: transparent; color: var(--dark); }
+.assessment-pager button.secondary:hover { background: var(--pale); }
+form pre { white-space: pre-wrap; overflow-wrap: anywhere; background: var(--pale); padding: 20px; }
+form .muted { color: var(--muted); }
+#evidence-summary { padding-left: 20px; }
+#evidence-summary li { margin: 7px 0; }
+#practice-feedback { padding: 26px; background: var(--pale); }
+#practice-feedback > h2 { margin-top: 0; }
+#domain-feedback { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1px 20px; list-style: none; margin: 20px 0; padding: 0; }
+#domain-feedback li { border-bottom: 1px solid var(--line); padding: 10px 0; }
+#domain-feedback strong { display: block; }
+#domain-feedback span { color: var(--muted); font-size: .9rem; }
+@media(max-width:650px){
+  .main-panel form > section { margin: 30px 0; }
+  #domain-feedback { grid-template-columns: 1fr; }
+  form .actions button,form .button-link { width: 100%; }
+  .assessment-pager button { flex: 1; }
+  .assessment-pager button:only-child { flex: 0 1 auto; }
+  #quiz fieldset { padding: 15px 0; }
+  #quiz .quiz-options { grid-template-columns: 1fr; }
+}
+@media(prefers-reduced-motion:reduce){.assessment-track div{transition:none}}
