@@ -59,7 +59,7 @@ const scores=()=>paths.map((p,i)=>({...p,index:i,score:p.skills.reduce((n,s)=>n+
 const appPage=document.body.dataset.page;
 const flowNav=document.querySelector('.flow-nav');
 if(flowNav){const skillsStep=document.createElement('a');skillsStep.href='skills-assessment.html';skillsStep.textContent='Skills assessment';flowNav.children[1]?.after(skillsStep)}
-if(flowNav){const steps=[...flowNav.children];const current=steps.findIndex(step=>step.classList.contains('active'));steps.forEach((step,index)=>{step.classList.toggle('completed',index<current);if(index===current)step.setAttribute('aria-current','step')})}
+if(flowNav){const steps=[...flowNav.children];const current=steps.findIndex(step=>step.classList.contains('active'));steps.forEach((step,index)=>{step.classList.toggle('completed',index<current);step.setAttribute('aria-label',`Step ${index+1} of ${steps.length}: ${step.textContent.trim()}${index<current?', completed':index===current?', current':''}`);if(index===current)step.setAttribute('aria-current','step')})}
 if(flowNav&&matchMedia('(max-width:650px)').matches)flowNav.querySelector('.active')?.scrollIntoView({block:'nearest',inline:'center'});
 document.querySelector('.flow-nav .active')?.setAttribute('aria-current','step');
 const navToggle=document.querySelector('.nav-toggle');

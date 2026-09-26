@@ -3,7 +3,10 @@ const menu = document.querySelector('.nav-toggle');
 const links = document.querySelector('.nav-links');
 const journeySteps = [...document.querySelector('.flow-nav').children];
 const currentJourneyStep = journeySteps.findIndex(step => step.classList.contains('active'));
-journeySteps.forEach((step, index) => { step.classList.toggle('completed', index < currentJourneyStep); });
+journeySteps.forEach((step, index) => {
+  step.classList.toggle('completed', index < currentJourneyStep);
+  step.setAttribute('aria-label', `Step ${index + 1} of ${journeySteps.length}: ${step.textContent.trim()}${index < currentJourneyStep ? ', completed' : index === currentJourneyStep ? ', current' : ''}`);
+});
 if (matchMedia('(max-width:650px)').matches) document.querySelector('.flow-nav .active')?.scrollIntoView({ block: 'nearest', inline: 'center' });
 menu.addEventListener('click', () => {
   const open = menu.getAttribute('aria-expanded') !== 'true';

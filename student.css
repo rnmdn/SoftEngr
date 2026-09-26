@@ -71,14 +71,19 @@ button,a{touch-action:manipulation}
 .skill-evidence{margin-top:18px}.skill-evidence p{margin:0 0 10px;color:var(--muted)}.skill-evidence a{color:var(--teal-dark);font-weight:800;text-underline-offset:3px}
 
 /* A labeled five-segment progress bar shared by every student page. */
-.flow-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;max-width:900px;margin-top:22px}
-.flow-nav span,.flow-nav a{position:relative;display:flex;align-items:center;justify-content:center;min-height:53px;padding:7px 10px 18px;border:0;border-radius:0;background:transparent;color:#c4d8d6;font-size:.86rem;font-weight:700;line-height:1.2;text-align:center;white-space:nowrap}
-.flow-nav span::after,.flow-nav a::after{content:"";position:absolute;right:0;bottom:0;left:0;height:6px;border-radius:4px;background:#67847e}
-.flow-nav .completed::after,.flow-nav .active::after{background:var(--lime)}
-.flow-nav a:hover{background:#ffffff12;color:white}
+.flow-nav{counter-reset:journey-step;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;max-width:900px;margin-top:22px}
+.flow-nav span,.flow-nav a{counter-increment:journey-step;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:9px;min-width:0;min-height:76px;padding:0 5px;border:0;border-radius:0;background:transparent;color:#c4d8d6;font-size:.82rem;font-weight:700;line-height:1.2;text-align:center;white-space:normal}
+.flow-nav span::before,.flow-nav a::before{content:counter(journey-step);position:relative;z-index:1;display:grid;place-items:center;flex:none;width:38px;height:38px;border:2px solid #8eaaa5;border-radius:50%;background:var(--dark);color:#d4e5e4;font-size:.95rem;font-weight:800}
+.flow-nav span::after,.flow-nav a::after{content:"";position:absolute;top:18px;left:50%;width:100%;height:2px;background:#8eaaa5}
+.flow-nav > :last-child::after{display:none}
+.flow-nav .completed::before{content:"✓";border-color:var(--lime);background:var(--lime);color:var(--dark)}
+.flow-nav .completed::after{background:var(--lime)}
 .flow-nav .active{background:transparent;border:0;border-radius:0;color:var(--lime);font-weight:850}
-.flow-nav a:focus-visible{outline:3px solid var(--lime);outline-offset:-3px}
-@media(max-width:650px){.flow-nav{display:flex;flex-wrap:nowrap;overflow-x:auto;max-width:100%;scrollbar-color:#a0b7b2 transparent;scroll-snap-type:x proximity}.flow-nav span,.flow-nav a{flex:0 0 120px;scroll-snap-align:center}}
+.flow-nav .active::before{border-color:var(--lime);background:var(--lime);color:var(--dark)}
+.flow-nav a:hover{background:transparent;color:white}
+.flow-nav a:hover::before{border-color:white}
+.flow-nav a:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+@media(max-width:650px){.flow-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;max-width:100%;overflow:visible}.flow-nav span,.flow-nav a{min-height:76px;padding:0 2px;font-size:.64rem;line-height:1.15}.flow-nav span::before,.flow-nav a::before{width:34px;height:34px;font-size:.85rem}.flow-nav span::after,.flow-nav a::after{top:16px}}
 
 @media(max-width:650px){
   .scale-guide{padding:13px 16px}
